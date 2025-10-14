@@ -3,29 +3,369 @@
 <head>
   <meta charset="UTF-8">
   <title>Portfolio Marioly Zelada</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
-    body { font-family: Arial, sans-serif; max-width: 800px; margin: auto; padding: 20px; line-height: 1.6; }
-    h1 { color: #2C3E50; }
-    a { color: #2980B9; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .project { margin-bottom: 20px; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body {
+      background-color: antiquewhite;
+      background-size: cover;        
+      background-position: center;   
+      background-repeat: no-repeat;  
+    }
+
+    main {
+      flex: 1;
+      margin-top: 70px; /* espacio para navbar */
+    }
+
+    /* Navbar fija */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.179);
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .navbar .container {
+      width: 90%;
+      max-width: 1200px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+    }
+
+    .navbar nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+    }
+
+    .navbar nav a:hover {
+      text-decoration: underline;
+    }
+
+    .presentacion {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; /* centra verticalmente */
+      text-align: center;
+      padding: 20px; /* menos padding arriba/abajo */
+      min-height: calc(100vh - 70px); /* altura de la ventana menos navbar */
+     
+    }
+
+    .presentacion h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+
+    .presentacion p {
+      font-size: 1.2rem;
+      max-width: 1000px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #222;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      border-radius: 30px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #555;
+      transform: scale(1.05);
+    }
+
+    .aboutme {
+      padding: 40px 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .aboutme_text_centrado {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .aboutme_text_centrado h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+ 
+    .aboutme_text_centrado p {
+      font-size: 1.1rem;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .aboutme_contenido h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #222;
+    }
+
+    .aboutme_contenido p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 15px;
+      text-align: justify;
+      color: #444;
+    }
+
+    .habilidades_contenido {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .habilidades_contenido h3 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .habilidades {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .habilidad {
+      background-color: #f2e8da;
+      color: #3b3b3b;
+      border-radius: 8px;
+      padding: 12px 24px;
+      font-weight: 600;
+      font-size: 15px;
+      box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+
+    .habilidad:hover {
+      background-color: #e0d0b7;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.229);
+    }
+
+    .mis_proyectos_contenido {
+      padding: 40px 20px;
+      background-color: antiquewhite;
+    }
+
+    .mis_proyectos_contenido h2 {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .mis_proyectos_contenido p {
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .proyecto_contenedor {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .proyecto {
+      background-color: #f2e8da;
+      border-radius: 8px;
+      padding: 20px;
+      flex: 1 1 300px;
+      max-width: 350px;
+      box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .proyecto:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    .proyecto h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .proyecto p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px 20px;
+      text-align: center;
+      color: black;
+      box-shadow: 0 -4px 10px rgba(0,0,0,0.233);
+    }
+
+    footer a {
+      color: black;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
   </style>
 </head>
 <body>
-  <h1>👋 Holaa!, soy Marioly Zelada</h1>
-  <p>Estudiante de 5to año de Ingeniería en Informática en la Universidad de Belgrano, apasionada y con gran interés por el análisis y la gestión de datos.</p>
 
-  <h2>🚀 Proyectos Destacados</h2>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">Marioly Zelada</h1>
+      <nav>
+        <a href="#about">Sobre mí</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
-  <div class="project">
-    <h3>Data Lakehouse de Delitos y Comisarías</h3>
-   </div>
+  <!-- Contenido principal -->
+  <main>
+    <!-- Presentación -->
+    <section class="presentacion">
+      <h1>Holaa!, Soy Marioly Zelada👩🏻‍💻</h1>
+      <p>Apasionada por el análisis, la arquitectura de datos y la innovación constante. Me mueve la idea de transformar información en conocimiento y conocimiento en impacto.</p>
+      <a href="#projects" class="btn">Ver mis proyectos</a>
+    </section>
 
-  <div class="project">
-    <h3>Sistema de Gestión de Tesinas en la Nube</h3>
-   </div>
+    <!-- Sobre mí -->
+    <section id="about" class="aboutme">
+      <div class="aboutme_text_centrado">
+        <h2>Sobre mí</h2>
+        <hr style="border: 2px solid #821534; width: 13%; text-align: left;">
+      
+        <p>En esta sección encontrarás más información sobre mí, qué hago y cuáles son mis habilidades.</p>
+      </div>
 
-  <h2>🌐 Contacto</h2>
+      <div class="aboutme_contenido">
+        <h3>Un poco más sobre mí 👩🏻‍💻</h3>
+        <p>Soy Analista de Datos Junior y estudiante de Ingeniería en Informática en la Universidad de Belgrano, con más de 2 años de experiencia en Data Warehousing, ETL/ELT, modelado de bases de datos, integración, gestión y visualización de datos.</p> 
+        <p>Me apasiona transformar grandes volúmenes de información en conocimiento útil que impulse decisiones objetivas y confiables.</p> 
+        <p>Además, estoy enfocada en aprender y aplicar soluciones en la nube (Cloud Computing) para potenciar mis habilidades en datos y aportar mayor valor en la construcción de sistemas escalables, eficientes y orientados a la toma de decisiones.</p>
+        <p>Busco aprender y aportar valor en el mundo de los datos; si querés compartir ideas, proyectos o desafíos relacionados con Data Engineering, BI o análisis de datos, me encantaría conversar 🤝💫  
+          Conectemos en <a href="https://www.linkedin.com/in/marioly-zelada/" target="_blank">LinkedIn</a>.
+        </p>
+        <p>Estoy abierta a oportunidades donde pueda aplicar mis conocimientos técnicos y habilidades blandas para generar un impacto positivo en la transformación digital de las organizaciones.</p>
+      </div>
+
+      <!-- Habilidades -->
+      <div class="habilidades_contenido">
+        <h3>Mis habilidades</h3>
+        <hr style="border: 2px solid #821534; width: 13%; text-align: left;">
+        <div class="habilidades">
+          <div class="habilidad">MySQL</div>
+          <div class="habilidad">Power BI</div>
+          <div class="habilidad">Looker Studio</div>
+          <div class="habilidad">Python</div>
+          <div class="habilidad">GitHub</div>
+          <div class="habilidad">ETL / ELT</div>
+          <div class="habilidad">Data Warehouse</div>
+          <div class="habilidad">Data Lakehouse</div>
+          <div class="habilidad">Modelado Dimensional</div>
+          <div class="habilidad">Pentaho</div>
+          <div class="habilidad">Supabase</div>
+          <div class="habilidad">Excel</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="projects" class="mis_proyectos_contenido">
+      <h2>Proyectos</h2>
+      <hr style="border: 2px solid #821534; width: 13%; text-align: left;">
+      <p style="text-align: center;">En esta sección encontrarás información sobre mis proyectos personales</p> 
+
+      <div class="proyecto_contenedor">
+        <div class="proyecto">
+          <h3>Sistema de Gestión de Tesinas en la Nube</h3>
+          <p><strong>Rol:</strong> Analista de Datos</p>
+          <p><strong>Periodo:</strong> 06/2025 – Actualidad</p>
+          <p>Sistema desarrollado para la Facultad de Ingeniería y Tecnología, Universidad de Belgrano, integrando múltiples fuentes de datos en la nube y facilitando la gestión académica.</p>
+          <p><strong>Herramientas utilizadas:</strong> PostgreSQL | Supabase | Python | Excel | Power BI | Jira</p>
+        </div>
+
+        <div class="proyecto">
+          <h3>Data Lakehouse de Delitos y Comisarías</h3>
+          <p><strong>Rol:</strong> Analista de Datos</p>
+          <p><strong>Periodo:</strong> 09/2025 – 10/2025</p>
+          <p>Desarrollo de un Data Lakehouse para integrar, procesar y analizar información sobre delitos y comisarías de la Provincia de Buenos Aires, permitiendo el análisis de indicadores sociales y la generación de dashboards interactivos para la toma de decisiones estratégicas.</p>
+          <p><strong>Herramientas utilizadas:</strong> Python | Pandas | MySQL Workbench | LucidChart | Power BI</p>
+        </div>
+
+        <div class="proyecto">
+          <h3>Desarrollo de Data Warehouse para Análisis de Indicadores Sociales</h3>
+          <p><strong>Rol:</strong> Analista de Datos</p>
+          <p><strong>Periodo:</strong> 03/2024 – 08/2024</p>
+          <p>Diseñé e implementé un Data Warehouse para el análisis social de la provincia de Buenos Aires, Argentina, permitiendo centralizar y organizar datos de manera eficiente para su análisis.</p>
+          <p><strong>Herramientas utilizadas:</strong> MySQL | Pentaho | Excel | Power BI | Jira</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>© 2025 Marioly Zelada | Diseñado con ❤️</p>
+    <p>
+      <a href="mailto:mari.zeladaa22@gmail.com">mari.zeladaa22@gmail.com</a> | 
+      <a href="https://github.com/MariolyZelada" target="_blank">GitHub</a> | 
+      <a href="https://www.linkedin.com/in/marioly-zelada/" target="_blank">LinkedIn</a>
+    </p>
+  </footer>
 
 </body>
 </html>
+<script>
+  // Al cargar la página, ir al inicio
+  window.addEventListener("load", function() {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 1);
+  });
+</script>
+
+
+
