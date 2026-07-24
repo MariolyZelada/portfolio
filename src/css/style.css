@@ -2,6 +2,7 @@
 @import url(base/typography.css);
 
 @import url(layout/container.css);
+@import url(layout/header.css);
 @import url(layout/navbar.css);
 @import url(layout/footer.css);
 

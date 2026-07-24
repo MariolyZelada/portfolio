@@ -1,0 +1,10 @@
+header{
+    padding: 0.5rem clamp(0.5rem,2vw,2rem) 0;
+    background-color: #fff;
+}
+@media(max-width:860px){
+
+    .header{
+        padding:1rem;
+    }
+}
