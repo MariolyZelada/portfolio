@@ -126,16 +126,16 @@
         flex-direction:column;
         align-items:center;
         gap:2rem;
-        background-color: #ff8a00;
+        
     }
 
     .footer_brand{
-        justify-content:center;
+        justify-content:start;
     }
 
     .footer_nav,
     .footer_social{
-        text-align:center;
+        text-align:start;
     }
 
 }
