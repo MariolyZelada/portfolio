@@ -135,7 +135,7 @@
 
     .footer_nav,
     .footer_social{
-        text-align:start;
+        justify-content:start;
     }
 
 }
