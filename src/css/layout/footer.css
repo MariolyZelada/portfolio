@@ -118,16 +118,24 @@
 @media(max-width:860px){
 
     .footer_logo{
-        display: none;
-    }
-    .footer_content{
-        display: flex;
-        flex-direction: column;
-    }
-    .footer_nav, .footer_social{
-        justify-items:start;
-    
+        display:none;
     }
 
+    .footer_content{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:2rem;
+        background-color: #ff8a00;
+    }
+
+    .footer_brand{
+        justify-content:center;
+    }
+
+    .footer_nav,
+    .footer_social{
+        text-align:center;
+    }
 
 }
