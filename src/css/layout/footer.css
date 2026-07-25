@@ -120,12 +120,6 @@
     .footer_logo{
         display: none;
     }
-    
-
-
-}
-@media(max-width:560px){
-
     .footer_content{
         display: flex;
         flex-direction: column;
