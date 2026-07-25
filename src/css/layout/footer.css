@@ -5,7 +5,7 @@
 }
 .footer_content{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
     gap: 4rem;
     align-items: start;
     
@@ -101,12 +101,13 @@
     color:#ff8a00 ;
 }
 
-.footer_social{
+.footer_connect{
     display:flex;
     flex-direction:column;
     justify-items:center;
     
 }
+
 
 .footer_copyright{
     color: #babdc4;
