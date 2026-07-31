@@ -229,13 +229,18 @@
         display: none;
     }
     .hero_title{
-        font-size: 1.2rem;
+        font-size: 1.4rem;
+    }
+    .hero_welcome{
+        font-size: 0.5rem;
+        padding:0.25rem var(--space-xs);
+
     }
     .hero_subtitle{
         font-size: 0.7rem;
     }
     .hero_description{
-        font-size: 0.5rem;
+        font-size: 0.6rem;
     }
     .hero_topics{
         display: none;
@@ -251,7 +256,7 @@
     }
     .hero_actions{
         gap: var(--space-xs);
-
+        justify-content: center;
     }
 
 .hero_link_contact,

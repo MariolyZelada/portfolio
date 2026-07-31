@@ -169,6 +169,12 @@
     .navbar_toggle{
         display:flex;
     }
+    .navbar_name{
+       font-size: 0.7rem;
+    }
+    .navbar_role{
+    font-size:0.5rem;
+    }
 
 }
 
