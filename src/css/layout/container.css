@@ -2,3 +2,8 @@
     width: 100%;
     padding:2rem 4rem;
 }
+@media(max-width:860px){
+    .container{
+        padding: 1rem 1rem;
+    }
+}

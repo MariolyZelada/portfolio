@@ -228,31 +228,36 @@
     .hero_media{
         display: none;
     }
-    .hero_stack_list{
-        display:flex;
-        gap:0;
+    .hero_title{
+        font-size: 1.2rem;
     }
-    .hero_stack_item{
-        display:flex;
-        align-items:center;
-        gap:var(--space-xs);
-        padding:0.4rem 0.6rem;
-        font-size:0.65rem;
+    .hero_subtitle{
+        font-size: 0.7rem;
     }
-
-    .hero_stack_item i{
-        font-size:0.8rem;
-    }
-    
-    .hero_metric_icon{
-        width: 2rem;
-        height: 2rem;
-    }
-    .hero_metric_value{
-        font-weight: 400;
-        font-size: 1rem;
-    }
-    .hero_metric_label{
+    .hero_description{
         font-size: 0.5rem;
     }
+    .hero_topics{
+        display: none;
+    }
+
+    .hero_stack{
+        display: none;
+    }
+    
+    
+    .hero_metrics{
+        display: none;
+    }
+    .hero_actions{
+        gap: var(--space-xs);
+
+    }
+
+.hero_link_contact,
+.hero_link_projects{
+    padding:0.5rem 1rem;
+    font-size:0.5rem;
+    font-size: 0.5rem;
+}
 }
