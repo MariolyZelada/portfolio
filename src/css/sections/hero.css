@@ -343,7 +343,7 @@
     }
 } 
 @media(max-width:495px){
-   .hero_header{}
+
     .hero_topics{
         display: none;
     }
