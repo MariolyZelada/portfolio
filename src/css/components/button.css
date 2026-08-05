@@ -41,3 +41,8 @@
     color:#08072e;
     border:1px solid #bcbce5d4;
 }
+@media(max-width:495px){
+    .btn{
+        padding: 0.5rem 0.7rem;   
+    }
+}
