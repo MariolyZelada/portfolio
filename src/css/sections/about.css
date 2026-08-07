@@ -28,6 +28,17 @@
     height: 100%;
     justify-content: center;
 }
+.about_eyebrow{
+    display:flex;
+    align-items:center;
+    width:fit-content;
+    font-size:clamp(.9rem,1vw,1rem);
+    font-weight:600;
+    border-radius:var(--radius-pill);
+    background-color:hwb(41 0% 0% / 0.178);
+    color:#ff8a00;    
+    padding:var(--space-xs) var(--space-sm);
+}
 .about_title{
     color:#060a3b;
     font-size: clamp(1rem, 5vw, 3rem);
@@ -43,7 +54,16 @@
     line-height:1.8;
 }
 .about_title_second{
-    color: rgb(241, 120, 33);
+    background: linear-gradient(
+        135deg,
+        #ff8a00 0%,
+        #f03544 50%,
+        #ff4fa3 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 .about_media{
     flex:1;
@@ -51,7 +71,6 @@
     align-items: end;
 }
 .about_personal{
-    
     display: flex;
     gap:  clamp(0.5rem, .6vw, .6rem);
     width: 100%;
@@ -92,7 +111,16 @@
 .about_topics_title{
     display: flex;
     align-items: center;
-    color: rgb(241, 120, 33);
+    background: linear-gradient(
+        135deg,
+        #ff8a00 0%,
+        #f03544 50%,
+        #ff4fa3 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     font-weight: 900;
     font-size: clamp(1.2rem, 2vw, 1.5rem);
     text-align: center;
