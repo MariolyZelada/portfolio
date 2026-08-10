@@ -50,7 +50,6 @@
     color: transparent;
 }
 .projects_info{
-    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,7 +60,7 @@
 .projects_info_description{
     display: flex;
     gap: clamp(0.5rem, 1vw, 1rem);
-    padding: clamp(1.5rem, 2vw, 1.5rem);
+    padding: clamp(1.5rem, 2vw, 0.5rem);
     background:#b855fa25;
     border-radius: clamp(10px, 1vw, 16px);
     justify-content: center;
@@ -235,3 +234,28 @@
     color: rgb(103, 6, 141);
     font-weight: 800;
 }
+
+@media(max-width:1352px){
+
+    .projects_info{
+        display: grid;
+    }
+} 
+@media(max-width:1140px){
+
+    .projects_project{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+} 
+@media(max-width:906px){
+
+    .projects_project{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .projects_info{
+        display: none;
+    }
+    
+} 
