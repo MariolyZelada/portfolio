@@ -204,9 +204,6 @@
     font-weight:500;
     line-height:1.2;
 }
-.project_repo{
-    padding: var(--space-xs);
-}
 .project_links{
     display: flex;
     list-style: none;
@@ -259,3 +256,56 @@
     }
     
 } 
+@media(max-width:906px){
+
+    .projects_title{
+        padding: 0.5rem 0;
+        font-size: 1.5rem;
+    }
+    .projects_topics {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .projects_topics_list {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 0.75rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-x;
+    }
+
+    .projects_topics_list::-webkit-scrollbar {
+        display: none;
+    }
+
+    .projects_topics_item {
+        flex: 0 0 auto;
+    }
+    .project_item{
+        padding: 1rem;
+    }
+    .project_icon{
+        width: 2rem;
+        height: 3rem;
+        border-radius:clamp(8px, 1vw, 10px) ;
+    }
+    .project_text_stack{
+        font-size: 0.7rem;
+    }
+    .project_text_descrip{
+        font-size: 0.8rem;
+    }
+    .project_list{
+        gap: var(--space-xs);
+    }
+    
+    
+
+    
+}
