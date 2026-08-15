@@ -44,8 +44,9 @@
     background-clip: text;
     color: transparent;
 }
-.certifications_list{
-    display: flex;
+.certifications_list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
 }
 .certification_card{
@@ -71,9 +72,6 @@
     
 }
 
-.certification_card_year{
-    
-}
 .certification_year{
     background-color: rgb(253, 246, 203);
     padding: 0.3rem;
@@ -108,13 +106,14 @@
     background:#b855fa25;
     color: white;
     padding: 1.5rem;
-    gap: 1.5rem;
+    gap: clamp(0.5rem, 1vw, 1.2rem);
     align-items: center;
 }
 .certifications_continuous_content{
     display: flex;
     gap: 1.5rem;
     align-items: center;
+    
     
 }
 .certifications_continuous_icon{
@@ -127,20 +126,23 @@
 }
 .certifications_continuous_text{
     color:#060a3b;
+    text-align: justify;
 }
 .certifications_continuous_title{
     color:#060a3b;
 }
-.certifications_continuous_description{
+
+.certifications_continuous_link {
+    flex: 1;
     
 }
-.certifications_continuous_link {
-    font-size: clamp(0.8rem, 0.8vw, 1.5rem);
-}
+
 .certifications_link {
+    
+    font-size: clamp(0.8rem, 1vw, 1.5rem);
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.5rem; /* controla el espacio entre texto e icono */
 
     background: linear-gradient(
         135deg,
@@ -157,4 +159,44 @@
     border: 1px solid #ff4fa3;
     border-radius: var(--radius-pill);
     padding: 0.6rem 0.8rem;
+}
+
+@media(max-width:1280px){
+    .certifications_continuous_link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .certifications_continuous_link{
+        display: none;
+        
+    }
+}
+
+@media(max-width:1200px){
+    .certifications_list{
+        grid-template-columns: repeat(2, 1fr);
+           
+    }
+   
+}
+@media(max-width:850px){
+    .certifications_list{
+        grid-template-columns: repeat(1, 1fr);
+           
+    }
+    .certifications_continuous_text{
+        font-size: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+    .certifications_continuous{
+        padding: 1rem;
+    }
+    .certifications_continuous_content{
+        gap: 0.5rem;
+    }
+
 }
