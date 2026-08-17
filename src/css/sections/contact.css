@@ -1,0 +1,183 @@
+.contacts{
+    width:100%;
+    display:flex;
+    min-height: 100vh;
+    align-items: center;
+}
+.contacts_content{
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.contacts_header{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.contacts_eyebrow{
+    display:flex;
+    align-items:center;
+    width:fit-content;
+    font-size:clamp(.9rem,1vw,1rem);
+    font-weight:600;
+    border-radius:var(--radius-pill);
+    background-color:hwb(41 0% 0% / 0.178);
+    color:#ff8a00;    
+    padding:var(--space-xs) var(--space-sm);
+}
+.contacts_title{
+    color:#060a3b;
+    font-size: clamp(1rem, 5vw, 3rem);
+}
+.contacts_title_second{
+    background: linear-gradient(
+        135deg,
+        #ff8a00 0%,
+        #f03544 50%,
+        #ff4fa3 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.contacts_description{
+    color:#242e42;
+    font-size:clamp(.95rem,1vw,1.1rem);
+    line-height:1.8;
+}
+.contacts_list{
+    display: flex;
+    gap: 1.5rem;
+}
+.contact_card{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background:#fff;  
+    border-radius: clamp(10px, 1vw, 16px);  
+    box-shadow:0 1px 3px rgba(180,180,182,.58);
+    padding: 1.5rem;
+}
+.contact_card_icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.contact_card_icon i {
+    font-size: 2rem;
+    padding: 0.8rem;
+    border-radius: var(--radius-pill);
+    background: linear-gradient(
+        135deg,
+        #ff8a00 0%,
+        #f03544 50%,
+        #ff4fa3 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.contact_card_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.contact_card_title{
+    color: #060a3b;
+    font-size: 1.1rem;
+}
+.contact_card_info{
+    font-size: 0.8rem;
+}
+.contact_card_link{
+    font-size: clamp(0.8rem, 1vw, 1.5rem);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; /* controla el espacio entre texto e icono */
+
+    background: linear-gradient(
+        135deg,
+        #ff8a00 0%,
+        #f03544 50%,
+        #ff4fa3 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-weight: 400;
+    border: 1px solid #ff4fa3;
+    border-radius: var(--radius-pill);
+    padding: 0.6rem 0.8rem;
+}
+.contacts_cta{
+    display: flex;
+    border-radius:clamp(8px, 1vw, 10px) ;
+    background:#b855fa25;
+    padding: 1.9rem;
+    gap: clamp(0.5rem, 2vw, 5rem);
+    align-items: center;
+    justify-content: center;
+
+}
+.contacts_cta_content{
+    display: flex;
+    gap: clamp(0.5rem, 2vw, 5rem);
+    align-items: center;
+}
+.contacts_cta_icon{
+    height: 4rem;
+    width: 3rem;
+    color: #ff4fa3;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.contacts_cta_text{
+    color:#060a3b;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.5rem, 0.8vw, 1rem);
+}
+.contacts_cta_title{
+    font-size: 1rem;
+}
+.contacts_cta_description{
+    font-size: 0.9rem;
+}
+.contacts_cta_link{
+    font-size: clamp(0.8rem, 1vw, 1.5rem);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem; /* controla el espacio entre texto e icono */
+
+    background: linear-gradient(
+        135deg,
+        #ff8a00 0%,
+        #f03544 50%,
+        #ff4fa3 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-weight: 400;
+    border: 1px solid #ff4fa3;
+    border-radius: var(--radius-pill);
+    padding: 0.6rem 0.8rem;
+}
+.contacts_link{
+    display: flex;
+    gap: 0.7rem;
+}
