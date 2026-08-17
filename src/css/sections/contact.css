@@ -47,8 +47,9 @@
     font-size:clamp(.95rem,1vw,1.1rem);
     line-height:1.8;
 }
-.contacts_list{
-    display: flex;
+.contacts_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
 }
 .contact_card{
@@ -180,4 +181,35 @@
 .contacts_link{
     display: flex;
     gap: 0.7rem;
+}
+/* Tablet */
+@media (max-width: 900px) {
+    .contacts_list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .contacts_list {
+        grid-template-columns: 1fr;
+    }
+    .contacts_cta_title{
+        font-size: 0.5rem;        
+        text-align: start;
+    }
+    .contacts_cta_description{
+        font-size: 0.5rem;
+        text-align: start;
+    }
+    .contacts_link{
+        font-size: 0.5rem;
+    }
+    .contacts_cta_link{
+        padding: 0.5rem;
+
+    }
+    .contacts_cta{
+        padding: 0.5rem;
+    }
 }
