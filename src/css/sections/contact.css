@@ -120,6 +120,17 @@
     border-radius: var(--radius-pill);
     padding: 0.6rem 0.8rem;
 }
+.contact_link{
+   text-decoration: none;
+    color: #babdc4;
+    font-weight: 500;
+    position: relative;
+    transition: .3s; 
+}
+.contact_link:hover{
+    color:#ff8a00 ;
+} 
+
 .contacts_cta{
     display: flex;
     border-radius:clamp(8px, 1vw, 10px) ;
