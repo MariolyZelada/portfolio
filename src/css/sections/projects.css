@@ -13,6 +13,7 @@
 .projects_layout{
     display:flex;
     gap:var(--space-sm);
+    flex-direction: column;
 }
 
 .projects_eyebrow{
