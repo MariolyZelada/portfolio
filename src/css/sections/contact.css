@@ -130,6 +130,14 @@
 .contact_link:hover{
     color:#ff8a00 ;
 } 
+.contact_card_link a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    text-decoration: none;
+    color: inherit;
+}
 
 .contacts_cta{
     display: flex;
