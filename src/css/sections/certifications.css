@@ -97,7 +97,10 @@
 .certification_card_link{
     color: #f03544;
     font-size: clamp(0.8rem, 1vw, 1.5rem);
-    padding-top: 0.5rem;
+}
+
+.certification_card_link hr{
+    padding-bottom: 0.5rem;
 }
 
 .certifications_continuous{
@@ -182,9 +185,25 @@
    
 }
 @media(max-width:850px){
+    .certifications_title{
+        text-align: justify;
+    }
     .certifications_list{
-        grid-template-columns: repeat(1, 1fr);
-           
+        grid-template-columns: repeat(2, 1fr);
+        gap:1rem   
+    }
+    .certification_card{
+        padding: 0.5rem;
+    }
+    .certification_card_title{
+        font-size: 0.7rem;
+    }
+    .certification_card_link{
+        font-size: 0.6rem;
+    
+    }
+    .certification_card_brand{
+        height: 2rem;
     }
     .certifications_continuous_text{
         font-size: 0.5rem;
