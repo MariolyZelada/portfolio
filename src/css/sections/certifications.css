@@ -1,7 +1,6 @@
 .certifications{
     width:100%;
     display:flex;
-    min-height: 100vh;
     align-items: center;
 }
 .certifications_content{

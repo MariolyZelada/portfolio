@@ -1,7 +1,6 @@
 .projects{
     width:100%;
     display:flex;
-    min-height: 100vh;
 }
 .projects_content{
     height:100%;
